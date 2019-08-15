@@ -12,3 +12,5 @@ Procfile
 server-icon.png
 *.sh
 /logs
+.*
+!/.gitignore
