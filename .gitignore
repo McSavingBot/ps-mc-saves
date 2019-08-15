@@ -1,0 +1,14 @@
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+/adoptopenjdk
+/plugins
+Aptfile
+index.ejs
+port80.js
+server.jar
+Procfile
+server-icon.png
+*.sh
+/logs
