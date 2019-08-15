@@ -14,3 +14,4 @@ server-icon.png
 /logs
 .*
 !/.gitignore
+screenlog.*
