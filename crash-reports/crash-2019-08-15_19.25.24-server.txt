@@ -1,0 +1,45 @@
+---- Minecraft Crash Report ----
+// But it works on my machine.
+
+Time: 8/15/19 7:25 PM
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: Java heap space
+	at net.minecraft.server.v1_9_R2.PacketPlayOutMapChunk.<init>(PacketPlayOutMapChunk.java:28)
+	at net.minecraft.server.v1_9_R2.PlayerChunk.b(PlayerChunk.java:131)
+	at net.minecraft.server.v1_9_R2.PlayerChunkMap.c(PlayerChunkMap.java:231)
+	at net.minecraft.server.v1_9_R2.PlayerChunkMap.addPlayer(PlayerChunkMap.java:279)
+	at net.minecraft.server.v1_9_R2.PlayerList.a(PlayerList.java:291)
+	at net.minecraft.server.v1_9_R2.PlayerList.onPlayerJoin(PlayerList.java:367)
+	at net.minecraft.server.v1_9_R2.PlayerList.a(PlayerList.java:159)
+	at net.minecraft.server.v1_9_R2.LoginListener.b(LoginListener.java:144)
+	at net.minecraft.server.v1_9_R2.LoginListener.c(LoginListener.java:54)
+	at net.minecraft.server.v1_9_R2.NetworkManager.a(NetworkManager.java:233)
+	at net.minecraft.server.v1_9_R2.ServerConnection.c(ServerConnection.java:140)
+	at net.minecraft.server.v1_9_R2.MinecraftServer.D(MinecraftServer.java:825)
+	at net.minecraft.server.v1_9_R2.DedicatedServer.D(DedicatedServer.java:399)
+	at net.minecraft.server.v1_9_R2.MinecraftServer.C(MinecraftServer.java:665)
+	at net.minecraft.server.v1_9_R2.MinecraftServer.run(MinecraftServer.java:564)
+	at java.lang.Thread.run(Thread.java:819)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.9.4
+	Operating System: Linux (amd64) version 4.4.0-1048-aws
+	Java Version: 1.8.0_222, Eclipse OpenJ9
+	Java VM Version: Eclipse OpenJ9 VM (JRE 1.8.0 Linux amd64-64-Bit Compressed References 20190717_368 (JIT enabled, AOT enabled)
+OpenJ9   - 0f66c6431
+OMR      - ec782f26
+JCL      - f147086df1e based on jdk8u222-b10), Eclipse OpenJ9
+	Memory: 13179944 bytes (12 MB) / 402653184 bytes (384 MB) up to 402653184 bytes (384 MB)
+	JVM Flags: 8 total; -Xoptionsfile=/app/adoptopenjdk/lib/amd64/compressedrefs/options.default -Xlockword:mode=default,noLockword=java/lang/String,noLockword=java/util/MapEntry,noLockword=java/util/HashMap$Entry,noLockword=org/apache/harmony/luni/util/ModifiedMap$Entry,noLockword=java/util/Hashtable$Entry,noLockword=java/lang/invoke/MethodType,noLockword=java/lang/invoke/MethodHandle,noLockword=java/lang/invoke/CollectHandle,noLockword=java/lang/invoke/ConstructorHandle,noLockword=java/lang/invoke/ConvertHandle,noLockword=java/lang/invoke/ArgumentConversionHandle,noLockword=java/lang/invoke/AsTypeHandle,noLockword=java/lang/invoke/ExplicitCastHandle,noLockword=java/lang/invoke/FilterReturnHandle,noLockword=java/lang/invoke/DirectHandle,noLockword=java/lang/invoke/ReceiverBoundHandle,noLockword=java/lang/invoke/DynamicInvokerHandle,noLockword=java/lang/invoke/FieldHandle,noLockword=java/lang/invoke/FieldGetterHandle,noLockword=java/lang/invoke/FieldSetterHandle,noLockword=java/lang/invoke/StaticFieldGetterHandle,noLockword=java/lang/invoke/StaticFieldSetterHandle,noLockword=java/lang/invoke/IndirectHandle,noLockword=java/lang/invoke/InterfaceHandle,noLockword=java/lang/invoke/VirtualHandle,noLockword=java/lang/invoke/PrimitiveHandle,noLockword=java/lang/invoke/InvokeExactHandle,noLockword=java/lang/invoke/InvokeGenericHandle,noLockword=java/lang/invoke/VarargsCollectorHandle,noLockword=java/lang/invoke/ThunkTuple -Xjcl:jclse29 -Xmx300m -Xss512k -XX:CICompilerCount=2 -Xms384m -Xmx384m
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	CraftBukkit Information: org.bukkit.craftbukkit.v1_9_R2.CraftCrashReport@f115faf7
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 20; [EntityPlayer['Kirbz000'/49035, l='world', x=-255.51, y=63.00, z=275.54](Kirbz000 at -255.5115621884028,63.0,275.53749242090834)]
+	Is Modded: Definitely; Server brand changed to 'Spigot'
+	Type: Dedicated Server (map_server.txt)
